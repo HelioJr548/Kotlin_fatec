@@ -3,7 +3,8 @@ package Atividade02
 fun main() {
 //    OrdemCrescente()
 //    MediaAluno()
-    MaiorDe3()
+//    MaiorDe3()
+    MaiorMenorDe5()
 }
 
 //  leia 3 (três) valores inteiros e
@@ -57,4 +58,17 @@ fun MaiorDe3() {
         n += x //Adiciona o input na lista(n)
     }
     print("O maior número digitado foi ${n.max()}") //Output
+}
+
+//  efetue a leitura de cinco números inteiros e
+// identificar o maior e o menor valor
+fun MaiorMenorDe5() {
+    val n = mutableListOf<Int>()    //Criação de lista mutavel
+    for (i in 1..5) {   // Looping com contador de 1 a 5
+        print("Digite um número: ") //Mensagem para usuario
+        val x = readLine().toString().toInt() //Variavel para input
+        n += x //Adiciona o input na lista(n)
+    }
+    println("O maior número digitado foi ${n.max()}") //Output para maior numero digitado
+    print("O menor número digitado foi ${n.min()}") //Output para menor numero digitado
 }
