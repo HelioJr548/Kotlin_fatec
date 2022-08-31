@@ -4,7 +4,9 @@ fun main() {
 //    OrdemCrescente()
 //    MediaAluno()
 //    MaiorDe3()
-    MaiorMenorDe5()
+//    MaiorMenorDe5()
+    ParImpar()
+
 }
 
 //  leia 3 (três) valores inteiros e
@@ -71,4 +73,16 @@ fun MaiorMenorDe5() {
     }
     println("O maior número digitado foi ${n.max()}") //Output para maior numero digitado
     print("O menor número digitado foi ${n.min()}") //Output para menor numero digitado
+}
+
+//  efetue a leitura de um número inteiro e
+//  apresentar uma mensagem informando se o número é par ou ímpar.
+fun ParImpar() {
+    print("Digite um número: ") //Mensagem para o usuario
+    val n: Int = readLine().toString().toInt()  //Variavel para input
+    if (n % 2 == 0) {    //Condicional que verifica se o resto da divisao por 2 é igual a 0
+        print("O número $n é par")  //Output caso condição for VERDADEIRA
+    } else {
+        print("O número $n é impar") //Output caso condição for FALSA
+    }
 }
