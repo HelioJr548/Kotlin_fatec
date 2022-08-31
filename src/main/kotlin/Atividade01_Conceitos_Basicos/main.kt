@@ -75,7 +75,7 @@ fun ex8() {
     val r: Double = readLine().toString().toDouble()
     val a: Double = 3.14159 * r.pow(2)
     println("A área da circunferencia é igual a: $a")
-}
+} 
 
 fun ex9() {
 //    cálculo e a apresentação do valor de uma prestação em atraso,
