@@ -8,8 +8,8 @@ fun main() {
 //    MaiorDe3()
 //    MaiorMenorDe5()
 //    ParImpar()
-    Cardapio()
-
+//    Cardapio()
+    Fatorial()
 }
 
 //  leia 3 (três) valores inteiros e
@@ -66,7 +66,7 @@ fun MaiorDe3() {
 }
 
 //  efetue a leitura de cinco números inteiros e
-// identificar o maior e o menor valor
+//  identificar o maior e o menor valor
 fun MaiorMenorDe5() {
     val n = mutableListOf<Int>()    //Criação de lista mutavel
     for (i in 1..5) {   // Looping com contador de 1 a 5
@@ -93,14 +93,14 @@ fun ParImpar() {
 //  leia o código do item pedido,
 //  a quantidade e calcule o valor a ser pago por aquele lanche.
 //  Considere que a cada execução somente será calculado um item.
-//O cardápio de uma lanchonete é o seguinte:
-// Especificação 	Código 	Preço
-// Cachorro quente 	100 	1,20
-// Bauru simples 	101 	1,30
-// Bauru com ovo 	102 	1,50
-// Hambúrger 		103 	1,20
-// Cheeseburguer 	104 	1,30
-// Refrigerante 	105 	1,00
+//  O cardápio de uma lanchonete é o seguinte:
+//  Especificação 	Código 	Preço
+//  Cachorro quente 	100 	1,20
+//  Bauru simples 	101 	1,30
+//  Bauru com ovo 	102 	1,50
+//  Hambúrger 		103 	1,20
+//  Cheeseburguer 	104 	1,30
+//  Refrigerante 	105 	1,00
 fun Cardapio() {
     var c = 1  //Variavel iniciada para loop
     val map = //Criação de Map
@@ -137,4 +137,15 @@ fun Cardapio() {
             print("\nPrograma Finalizado!") //Mensagem para usuario
         }
     }
+}
+
+// receba um número e mostre o fatorial desse número.
+fun Fatorial() {
+    print("Qual número deseja descobrir o fatorial: ")  //Mensagem para usuario
+    var n: Int = readLine().toString().toInt()  //Input
+    val f: Int = n  //Variavel guarda valor de input da usuario
+    for (i in n - 1 downTo 1) {    //Laço de Repetição para n-1 até 1
+        n *= i  //Multiplica o operando da direita com o da esquerda e atribui o resultado ao operando da esquerda
+    }
+    print("$f! = $n")   //Output
 }
