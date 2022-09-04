@@ -1,7 +1,5 @@
 package Atividade02
 
-import javax.swing.table.TableColumn
-
 fun main() {
 //    OrdemCrescente()
 //    MediaAluno()
@@ -9,7 +7,8 @@ fun main() {
 //    MaiorMenorDe5()
 //    ParImpar()
 //    Cardapio()
-    Fatorial()
+//    Fatorial()
+    Top100()
 }
 
 //  leia 3 (três) valores inteiros e
@@ -148,4 +147,14 @@ fun Fatorial() {
         n *= i  //Multiplica o operando da direita com o da esquerda e atribui o resultado ao operando da esquerda
     }
     print("$f! = $n")   //Output
+}
+
+//  apresentar o total da soma obtida dos cem primeiros números inteiros
+//  ( 1 + 2 + 3 + 4 + .... 98+ 99+ 100)
+fun Top100() {
+    var s = 0  //inicia variavel
+    for (i in 1..100) { //Laço de repetição de 1 até 100
+        s += i  //Soma o operando da direita com o da esquerda e atribui o resultado ao operando da esquerda
+    }
+    print("A soma dos cem primeiros números inteiros é: $s")    //Output
 }
