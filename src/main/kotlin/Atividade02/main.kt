@@ -8,7 +8,8 @@ fun main() {
 //    ParImpar()
 //    Cardapio()
 //    Fatorial()
-    Top100()
+//    Top100()
+    Temp10()
 }
 
 //  leia 3 (três) valores inteiros e
@@ -138,7 +139,7 @@ fun Cardapio() {
     }
 }
 
-// receba um número e mostre o fatorial desse número.
+//  receba um número e mostre o fatorial desse número.
 fun Fatorial() {
     print("Qual número deseja descobrir o fatorial: ")  //Mensagem para usuario
     var n: Int = readLine().toString().toInt()  //Input
@@ -157,4 +158,13 @@ fun Top100() {
         s += i  //Soma o operando da direita com o da esquerda e atribui o resultado ao operando da esquerda
     }
     print("A soma dos cem primeiros números inteiros é: $s")    //Output
+}
+
+//  apresente os valores de conversão de graus Celsius em Fahrenheit, de 10 em 10 graus
+//  iniciando a contagem em 10 graus Celsius e finalizando em 100 graus Celsius.
+//  O programa deve apresentar os valores das duas temperaturas.
+fun Temp10() {
+    for (t in 10..100 step 10) { //Laço de repetição com passos de 10 em 10, iniciado em 10 e finaliza no 100
+        println("$t°C são ${(9 * t + 160) / 5}°F")   //Output a cada repetição do "for"
+    }
 }
