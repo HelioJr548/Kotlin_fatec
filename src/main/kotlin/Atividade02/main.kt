@@ -1,11 +1,14 @@
 package Atividade02
 
+import javax.swing.table.TableColumn
+
 fun main() {
 //    OrdemCrescente()
 //    MediaAluno()
 //    MaiorDe3()
 //    MaiorMenorDe5()
-    ParImpar()
+//    ParImpar()
+    Cardapio()
 
 }
 
@@ -84,5 +87,54 @@ fun ParImpar() {
         print("O número $n é par")  //Output caso condição for VERDADEIRA
     } else {
         print("O número $n é impar") //Output caso condição for FALSA
+    }
+}
+
+//  leia o código do item pedido,
+//  a quantidade e calcule o valor a ser pago por aquele lanche.
+//  Considere que a cada execução somente será calculado um item.
+//O cardápio de uma lanchonete é o seguinte:
+// Especificação 	Código 	Preço
+// Cachorro quente 	100 	1,20
+// Bauru simples 	101 	1,30
+// Bauru com ovo 	102 	1,50
+// Hambúrger 		103 	1,20
+// Cheeseburguer 	104 	1,30
+// Refrigerante 	105 	1,00
+fun Cardapio() {
+    var c = 1  //Variavel iniciada para loop
+    val map = //Criação de Map
+        mapOf(
+            100 to 1.20, 101 to 1.30,
+            102 to 1.50, 103 to 1.20,
+            104 to 1.30, 105 to 1.00
+        ) //Key e Values do Map
+    while (c != 0) { //Loop enquanto c diferente de 0
+        print(  //Descrição do Menu
+            "Especificação\t\tCódigo\t\tPreço\n" +
+                    "Cachorro quente \t100 \t\t1,20\n" +
+                    "Bauru simples \t\t101 \t\t1,30\n" +
+                    "Bauru com ovo \t\t102 \t\t1,50\n" +
+                    "Hambúrger \t\t\t103 \t\t1,20\n" +
+                    "Cheeseburguer \t\t104 \t\t1,30\n" +
+                    "Refrigerante \t\t105 \t\t1,00\n" +
+                    "Para finalizar pedido digite 0\n" +
+                    "Digite o código de sue pedido: "
+        )
+        c = readLine().toString().toInt() //Variavel recebe input
+        if (c in map) { //Verifica se o valor do input existe no Map
+            print("Digte a quantidade desejada: ")  //Mensagem para usuario
+            val q: Int = readLine().toString().toInt()   //Inicia variavel para input da quantidade
+            println(
+                "\nSeu pedido foi feito:\n" +
+                        "Código: [$c] \tQuantidade: $q \t" +
+                        "Valor Unitário: ${String.format("%.2f", map[c])} \t" +
+                        "Valor Total: R$${String.format("%.2f", map.getValue(c) * q)}\n"
+            )  //Output do pedido feito
+        } else if (c !in map && c != 0) { //Verifica se input(c) não esta presente no Map e é diferente de 0
+            println("\nValor não reconhecido!\n")   //Mensagem caso "else if" for verdadeiro
+        } else {  //Caso "if" e "else if" não forem atendidos
+            print("\nPrograma Finalizado!") //Mensagem para usuario
+        }
     }
 }
