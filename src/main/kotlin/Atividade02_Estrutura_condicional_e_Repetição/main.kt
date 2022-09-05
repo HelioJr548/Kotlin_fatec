@@ -1,4 +1,4 @@
-package Atividade02
+package Atividade02_Estrutura_condicional_e_Repetição
 
 fun main() {
 //    OrdemCrescente()
