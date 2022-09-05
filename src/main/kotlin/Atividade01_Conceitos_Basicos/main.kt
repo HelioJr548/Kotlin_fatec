@@ -123,7 +123,7 @@ fun ex11() {
 fun ex12() {
 //   efetuar a leitura de um número inteiro e
 //   apresentar o resultado do quadrado desse número.
-    print("Digite o valor que deseja dobrar:  ")
+    print("Digite o valor que deseja elevar ao quadrado:  ")
     val n: Int = readLine().toString().toInt()
     println("O quadrado do numero $n é: ${n * n}")
 }
