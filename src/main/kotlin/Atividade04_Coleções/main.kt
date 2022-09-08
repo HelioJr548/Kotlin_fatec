@@ -47,6 +47,6 @@ fun ColecaoNotas() {
         n2 += arrayOf(readLine().toString().toDouble())
     }
     for (i in 0..4) {
-        println("A media final de ${alunos[i]}: ${(n1[i] + n2[i]) / 2}")
+        println("A média final de ${alunos[i]}: ${(n1[i] + n2[i]) / 2}")
     }
 }
