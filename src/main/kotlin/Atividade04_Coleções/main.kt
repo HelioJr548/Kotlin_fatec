@@ -2,7 +2,8 @@ package Atividade04_Coleções
 
 fun main() {
 //    Colecao10()
-    AeB()
+//    AeB()
+    ColecaoNotas()
 }
 
 //  Criar uma coleção com 10 elementos
@@ -30,4 +31,22 @@ fun AeB() {
         b.add(i * 2)
     }
     print("Vetor A: $a\nVetor B: $b")
+}
+
+//   Receber as notas da primeira e da segunda prova de cinco alunos.
+//   Armazenar as notas da primeira e da segunda prova em vetores distintos.
+//   Calcular e escrever a média de cada aluno.
+fun ColecaoNotas() {
+    val alunos = arrayListOf<String>("João", "Maria", "Marcos", "José", "Joana")
+    var n1 = arrayOf<Double>()
+    var n2 = arrayOf<Double>()
+    for (i in alunos) {
+        print("Digite a Nota da primeira prova de $i: ")
+        n1 += arrayOf(readLine().toString().toDouble())
+        print("Digite a Nota da segunda prova de $i: ")
+        n2 += arrayOf(readLine().toString().toDouble())
+    }
+    for (i in 0..4) {
+        println("A media final de ${alunos[i]}: ${(n1[i] + n2[i]) / 2}")
+    }
 }
