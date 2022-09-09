@@ -3,7 +3,8 @@ package Atividade04_Coleções
 fun main() {
 //    Colecao10()
 //    AeB()
-    ColecaoNotas()
+//    ColecaoNotas()
+    ColecaoFatorial()
 }
 
 //  Criar uma coleção com 10 elementos
@@ -49,4 +50,31 @@ fun ColecaoNotas() {
     for (i in 0..4) {
         println("A média final de ${alunos[i]}: ${(n1[i] + n2[i]) / 2}")
     }
+}
+
+//  Criar um vetor A do tipo inteiro de 5 elementos
+//  Solicitar os valores para o usuário e inserir no vetor A
+//  Criar um vetor B do tipo inteiro
+//  Ler o vetor A e para cada elemento lido calcular o fatorial e gravar no B
+//  Após de todos os elementos do vetor A, mostrar os dois vetores
+fun ColecaoFatorial() {
+    val A = arrayListOf<Int>()
+    val B = arrayListOf<Int>()
+    for (i in 1..5) {
+        print("Insira um valor: ")
+        A += arrayOf(readLine().toString().toInt())
+    }
+    for (i in A) {
+        B.add(fatorial(i))
+    }
+    println("Vetor A:  $A")
+    println("Vetor A fatorado:  $B")
+}
+
+fun fatorial(a: Int): Int {
+    var n = 1
+    for (i in 1..a) {
+        n *= i
+    }
+    return n
 }
